@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+<style>
+body{
+background-color:lightblue;
+}
+.ter{
+font-size:1.5em;
+}
+</style>
+<body>
+
+<div ng-app="myApp" ng-controller="myCtrl">
+
+<h1> {{firstName + " " + lastName}} </h1>
+<hr>
+<div class="ter">
+ <strong> Address: </strong>
+{{addr}}
+<br>
+<strong> Contact No: </strong>
+{{num}}
+<br>
+<strong> Qualifications: </strong>
+{{qual1}}
+<br>
+{{qual2}}
+<br>
+{{qual3}}
+<br>
+<hr>
+<strong> Skill Set: </strong>
+{{skills}}
+<br>
+<strong> Projects Undertaken: </strong>
+<strong> {{proj1}} </strong> <br>
+{{proj2}}
+<br>
+<strong> {{proj3}}</strong>
+<br>
+{{proj4}}
+{{proj5}}
+{{proj6}}
+<hr>
+<strong> Personal Information:</strong>
+<br>
+<strong> Date of Birth: </strong> {{dob}} <br>
+<strong> Father Name:</strong>{{dad}} <br>
+<strong> Languages Known: </strong> {{lan}}
+<hr>
+<strong> Declaration: </strong> {{dec}}
+</div>
+
+</div>
+
+<script>
+var app = angular.module('myApp', []);
+app.controller('myCtrl', function($scope) {
+  $scope.firstName = "Jaya Sowmini";
+  $scope.lastName = "Kona";
+  $scope.addr="10-11/1/B,LIC Building, Main Road, Madhira";
+  $scope.num="7661963214";
+  $scope.qual1="1.Pursuing Btech Computer Engineering in VIT-AP University";
+  $scope.qual2="2.Intermediate in Sri Chaitanya";
+  $scope.qual3="3.SSC in Narayana School";
+  $scope.skills="Efficient in Programming languages like c,c++,Java,Matlab";
+  $scope.proj1="1.IoT Based Air Pollution Controlling System using Arduino";
+  $scope.proj2=" In this project we developed a system which controls air pollution which senses the pollution rate with the help of Arduino.";
+$scope.proj3="Home Security System Using Raspberry Pi";
+$scope.proj4="In this project we developed a system in which it will send a mail to the owner of the house if any intruder passes through the entrance of the home";
+$scope.proj5=" at which the raspberry pi camera will be fixed. The pir motion sensor senses the motion within some range and it will activate pi camera and clicks";
+ $scope.proj6="picture of the intruder.Later it will send that photo to the email of that respective owner."; 
+ $scope.dob="04-08-2001";
+ $scope.dad="Kona Gopala Kesava Kumar";
+ $scope.lan="Telugu, Hindi, English";
+ $scope.dec="I hereby declare that the above information is true according to my knowledge. ";                            
+})                    
+                              
+</script>
+
+
+
+
+</body>
+</html>
